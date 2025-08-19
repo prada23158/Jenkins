@@ -1,0 +1,10 @@
+pipeline { agent any
+stages {
+stage('Checkout') { steps { echo 'Initialisation du projet...' } }
+stage('Build') { steps { echo 'Compilation...' } }
+stage('Test') { steps { echo 'Exécution des tests...' } }
+stage('Analyse') { steps { echo 'Qualité du code...' } }
+stage('Package') { steps { echo "Création d'un artefact..." } }
+stage('Deploy') { steps { echo 'Déploiement...' } }
+stage('Notification') { steps { echo 'Fin du pipeline...' } }
+} }
