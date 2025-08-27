@@ -8,14 +8,14 @@ pipeline {
 				echo "Code checked out succesfully." 
 			} 
 		}
-		stage('2.Build) { 
+		stage('2.Build') { 
 			steps { 
 				echo "Building the application..." 
 				// Utilise le wrapper Maven pour la portabilité
 				sh './mvnw compile'
 			} 
 		}
-		stage('3.Test) {
+		stage('3.Test') {
 			steps {
 				echo "Running tests…"
 				sh './mvnw test' 
@@ -23,3 +23,4 @@ pipeline {
 		}
 	}
 }
+
