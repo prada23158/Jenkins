@@ -17,10 +17,11 @@ pipeline {
 		}
 		stage('3.Test') {
 			steps {
-				echo "Running tests…"
+				echo "Running tests..."
 				sh './mvnw test' 
 			}
 		}
 	}
 }
+
 
